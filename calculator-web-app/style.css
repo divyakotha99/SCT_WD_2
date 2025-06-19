@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body {
+  background: linear-gradient(135deg, #1e90ff, #add8e6); 
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(30, 144, 255, 0.5); 
+  backdrop-filter: blur(6.5px);
+  -webkit-backdrop-filter: blur(6.5px);
+  padding: 25px 20px;
+  width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.calculator:hover {
+  transform: scale(1.02);
+}
+
+#display {
+  width: 100%;
+  max-width: 94%;
+  height: 60px;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2); 
+  color: #000000; 
+  text-align: right;
+  box-shadow: inset 0 0 5px #add8e6; 
+  overflow: hidden; 
+  white-space: nowrap; 
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  padding: 18px;
+  font-size: 1.3rem;
+  background: rgba(255, 255, 255, 0.3); 
+  border: 1px solid #e0e5e7; 
+  border-radius: 10px;
+  color: #1e90ff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(30, 144, 255, 0.2); 
+}
+
+.btn:hover {
+  background: #e5e9ea; 
+  color: #000; 
+  box-shadow: 0 0 20px #add8e6; 
+  transform: scale(1.05);
+}
+
+.equal {
+  grid-column: span 2;
+  background: #1e90ff; 
+  color: #ffffff; 
+  font-weight: bold;
+  box-shadow: 0 0 15px #add8e6; 
+}
+
+.equal:hover {
+  background: #0f7eff; 
+  box-shadow: 0 0 25px #add8e6; 
+  transform: scale(1.07);
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #display {
+    display: block;
+    margin: 0 auto 10px auto; 
+    width: 80%;
+    height: 60px;
+    font-size: 1.8rem;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #000000; 
+    text-align: right;
+    box-shadow: inset 0 0 5px #add8e6; 
+  }
+
+  .btn {
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+}
